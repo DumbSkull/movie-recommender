@@ -1,0 +1,28 @@
+.hover-default-pointer:hover {
+  cursor: default !important;
+}
+
+.heading-button-no-change:hover {
+  background-color: #2b2e4a !important;
+  color: #e84545 !important;
+}
+
+.white-color {
+  color: #c4c4c4;
+}
+
+.recommend-me-button {
+  background-color: #8e9aff !important;
+  color: #2b2e4a !important;
+  border-color: #8e9aff !important;
+}
+
+.recommend-me-button:hover {
+  background-color: #6373f9 !important;
+  border-color: #6373f9 !important;
+}
+
+.rounded-movie-button {
+  border-radius: 50px !important;
+  font-size: 18px !important;
+}
