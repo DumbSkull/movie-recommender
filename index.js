@@ -11,6 +11,8 @@ process.env.NODE_ENV = "development";
 //Listen for app to be ready:
 app.on("ready", () => {
   mainWindow = new BrowserWindow({
+    width: 1280,
+    height: 720,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
