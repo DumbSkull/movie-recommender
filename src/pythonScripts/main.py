@@ -9,8 +9,19 @@ args = sys.argv[1:]  # sys.argv[0] is the directory of this python script
 cwd = os.path.dirname(os.path.realpath(sys.argv[0]))
 
 # C:/Users/jerin/Desktop/Jerin/Coding/Projects/movie-recommender/src/pythonScripts
-similarityDf = pd.read_json(
-    cwd + "\\movielensDataset\\correlation_matrix.json")
+
+# Extracting movies and ratings dataset
+moviesDf = pd.read_json(cwd + "\\movielensDataset\\movies_filtered.json")
+ratingsDf = pd.read_json(cwd + "\\movielensDataset\\edited_ratings.json")
+
+mergedDf = pd.merge(moviesDf, ratingsDf).drop(['genres', 'rating num'], axis=1)
+
+user_ratings = mergedDf.pivot_table(
+    index=['userId'], columns=['title'], values='rating')
+user_ratings = user_ratings.dropna(thresh=10, axis=1).fillna(0)
+
+# Creation of the correlation table
+similarityDf = user_ratings.corr(method='pearson')
 
 
 def echo_args(df):
