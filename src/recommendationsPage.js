@@ -60,6 +60,13 @@ async function cardCreation() {
   let movieRecommendation = [];
   movieRecommendation = await pythonExecution();
 
+  const backBtn = document.getElementById("backBtn");
+  backBtn.style.display = "block";
+  backBtn.onclick = () => {
+    sessionStorage.clear();
+    window.location = "./mainWindow.html";
+  };
+
   const loadingScreen = document.getElementById("loading-text");
   loadingScreen.className = "";
   loadingScreen.style.display = "none";
