@@ -1,4 +1,3 @@
 /node_modules
 /release-builds
 /src/pythonScripts/movielensDataset/correlation_matrix.json
-/src/pythonScripts/movielensDataset/edited_ratings.json

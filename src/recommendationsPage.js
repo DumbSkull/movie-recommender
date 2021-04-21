@@ -60,6 +60,9 @@ async function cardCreation() {
   let movieRecommendation = [];
   movieRecommendation = await pythonExecution();
 
+  const backBtnLayout = document.getElementById("back-btn-layout");
+  backBtnLayout.style.display = "block";
+
   const backBtn = document.getElementById("backBtn");
   backBtn.style.display = "block";
   backBtn.onclick = () => {
@@ -93,20 +96,22 @@ async function cardCreation() {
       "col-lg-4 col-sm-6 col-xs-12 d-flex justify-content-center align-content-center p-4";
     const cardDiv = document.createElement("div");
     cardDiv.className = "container second-page-movie-card";
-    if (movie.title.length > 40) {
-      cardDiv.style.fontSize = "25px";
-    } else {
-      cardDiv.style.fontSize = "30px";
-    }
 
     const titleDiv = document.createElement("div");
     titleDiv.className = "text-center movie-title";
     titleDiv.innerHTML = movie.title;
+    if (movie.title.length > 40) {
+      titleDiv.style.fontSize = "25px";
+    } else {
+      titleDiv.style.fontSize = "30px";
+    }
+
     const horizontalLine = document.createElement("hr");
     horizontalLine.className = "movie-card-divider";
 
     const matchRateDiv = document.createElement("div");
-    matchRateDiv.className = "container text-end match-rate";
+    matchRateDiv.className =
+      "container badge badge-secondary text-end match-rate";
     matchRateDiv.innerHTML = "Match Rate: ";
 
     const matchPercent = document.createElement("span");
@@ -124,6 +129,7 @@ async function cardCreation() {
     yearTitle.innerHTML = "Year: ";
     const yearValue = document.createElement("span");
     yearValue.innerHTML = movieYear;
+    yearValue.style.fontSize = "15px";
 
     yearDetailDiv.appendChild(yearTitle);
     yearDetailDiv.appendChild(yearValue);
@@ -134,6 +140,7 @@ async function cardCreation() {
     genreTitle.innerHTML = "Genre: ";
     const genreValue = document.createElement("span");
     genreValue.innerHTML = genres;
+    genreValue.style.fontSize = "15px";
 
     genreDetailDiv.appendChild(genreTitle);
     genreDetailDiv.appendChild(genreValue);

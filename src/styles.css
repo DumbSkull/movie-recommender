@@ -37,8 +37,9 @@
   border-radius: 3px;
 }
 
-.back-btn-layout {
+#back-btn-layout {
   width: 75px;
+  display: none;
 }
 
 #backBtn {
@@ -92,11 +93,11 @@
 }
 
 .match-rate {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .card-item {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .card-btn {
