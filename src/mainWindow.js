@@ -15,7 +15,7 @@ const recommendMeButton = document.getElementById("recommend-me-button");
 let selectedMovies = [];
 
 fs.createReadStream(
-  path.join(assetsPath, "pythonScripts/movielensDataset/movies.csv")
+  path.join(assetsPath, "pythonScripts/movielensDataset/movies_filtered.csv")
 )
   .pipe(csv())
   .on("data", (data) => movies.push(data))
