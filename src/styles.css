@@ -26,3 +26,56 @@
   border-radius: 50px !important;
   font-size: 18px !important;
 }
+
+/* ----------------------- Second Page ----------------------- */
+.second-page-heading {
+  background-color: rgb(232, 69, 69, 0.13);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 40px;
+  border: 3px solid #53354a;
+  border-radius: 3px;
+}
+
+#loading-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 40px;
+  color: #53354a;
+}
+
+.second-page-movie-card {
+  background-color: #903749;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  padding: 0px !important;
+}
+
+.second-page-movie-card:hover {
+  box-shadow: 5px 5px 10px #53354a;
+}
+
+.movie-title {
+  padding: 20px;
+}
+
+.movie-card-divider {
+  margin: 0px !important;
+  background-color: #53354a;
+  border-bottom: 5px solid #53354a;
+}
+
+.match-rate {
+  font-size: 15px;
+}
+
+.card-item {
+  font-size: 20px;
+}
+
+.card-btn {
+  background-color: #53354a !important;
+  color: #8e9aff !important;
+  border-radius: 10px !important;
+}
